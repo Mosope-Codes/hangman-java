@@ -80,8 +80,6 @@ public class Hangman {
             int i = 0;
             String placeholder = printPlaceholders(randomWordChoice);
             String missedGuess = "";
-            
-            
 
             while (true) {
                 if(missedGuess.length() == (i + 1)){
@@ -95,7 +93,6 @@ public class Hangman {
                 String charString = scan.next();
                 char userGuess = charString.charAt(0);
                 
-
                 System.out.print("\nWord: ");                
                 placeholder = updatePlaceholder(randomWordChoice, userGuess, placeholder);
                 System.out.println(placeholder);
@@ -116,15 +113,7 @@ public class Hangman {
 
             }
         }
-
-        
-
-        
-        
-        
-        
-        
-        
+  
 
     }
 
@@ -154,14 +143,6 @@ public class Hangman {
         return placeholder;
     }
 
-    /**
-     * functionName = printMissedGuess
-     * Compare two letters
-     * Check if they are equal. If they are not, store in an array.
-     * @param word
-     * @param guess
-     */
-
     public static String printMissedGuesses(String word, char guess, String missedLetters){
         if(word.indexOf(guess) == -1){
             missedLetters += guess;
@@ -169,7 +150,6 @@ public class Hangman {
         return missedLetters;
         }
         
-
     public static String printPlaceholders(String word){
         String placeholderDisplay = "";
         for(int i = 0; i < word.length(); i++){           
@@ -177,8 +157,6 @@ public class Hangman {
         }
         return placeholderDisplay;
     }
-
-    
 
 }
 
